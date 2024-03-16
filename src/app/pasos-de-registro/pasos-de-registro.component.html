@@ -1,0 +1,87 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear" [hidden]="isVisible">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button>
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Información Básica</ng-template>
+        <mat-grid-list cols="5" rowHeight="5:1">
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Nombre</mat-label>
+                    <input matInput placeholder="Ingrese su nombre" formControlName="firstCtrl" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Apellido</mat-label>
+                    <input matInput placeholder="Ingrese su Apellido" formControlName="firstCtrl" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+               
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Sexo (PonerDropdown)</mat-label>
+                    <input matInput placeholder="Ingrese su nombre" formControlName="firstCtrl" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Correo electrónico</mat-label>
+                    <input matInput placeholder="Ingrese un orreo electrónico" formControlName="firstCtrl" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>teléfono</mat-label>
+                    <input matInput placeholder="Ingrese su teléfono" formControlName="firstCtrl" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Dirección</mat-label>
+                    <input matInput placeholder="Ejemplo Cra 50 No 40-40" formControlName="firstCtrl" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Ocupación</mat-label>
+                    <input matInput placeholder="a que se dedica" formControlName="firstCtrl" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>RH</mat-label>
+                    <input matInput placeholder="ejem: O+" formControlName="firstCtrl" required>
+                </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
