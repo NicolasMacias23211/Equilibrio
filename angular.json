@@ -67,7 +67,8 @@
               "browserTarget": "EqulibrioFront:build:production"
             },
             "development": {
-              "browserTarget": "EqulibrioFront:build:development"
+              "browserTarget": "EqulibrioFront:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

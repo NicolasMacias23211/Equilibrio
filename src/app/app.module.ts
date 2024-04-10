@@ -6,7 +6,6 @@ import {MatCardModule} from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BodyComponent } from './body/body.component';
 import { FootherComponent } from './foother/foother.component';
 import { HeaderComponent } from './header/header.component';
 import { RegistroComponent } from './registro/registro.component';
@@ -21,7 +20,9 @@ import { LoginComponent } from './login/login.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { MisionComponent } from './mision/mision.component';
 import { VisionComponent } from './vision/vision.component';
-import { gsap } from "gsap";
+import { HttpClientModule } from '@angular/common/http';
+import { LoginContentComponent } from './login-content/login-content.component';
+import { HomeBodyComponent } from './home-body/home-body.component';
 
 @NgModule({
   declarations: [
@@ -33,23 +34,25 @@ import { gsap } from "gsap";
     LoginComponent,
     ServiciosComponent,
     MisionComponent,
-    VisionComponent
+    VisionComponent,
+    HomeBodyComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
     MatGridListModule,
     MatCardModule,
-    BodyComponent,
     MatButtonModule,
     MatStepperModule,
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    PasosDeRegistroComponent
+    PasosDeRegistroComponent,
+    LoginContentComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

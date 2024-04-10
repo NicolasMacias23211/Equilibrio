@@ -5,10 +5,11 @@
 *{
   font-family: 'CustomFont';
 }
+
 html, body { height: 100%;}
 body { margin: 0; }
 
 @font-face {
     font-family: 'CustomFont';
-    src: url('./assets/fonts/Kalufonia-Regular.otf');
+    src: url('./assets/fonts/ArbutusSlab-Regular.ttf');
   }

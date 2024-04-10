@@ -1,87 +1,177 @@
 <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear" [hidden]="isVisible">
     {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
   </button>
-  <mat-stepper [linear]="isLinear" #stepper>
+  <mat-stepper [linear]="isLinear" #stepper @Entrada>
     <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
+      <form [formGroup]="firstFormGroup" class="stepper-content">
         <ng-template matStepLabel>Información Básica</ng-template>
-        <mat-grid-list cols="5" rowHeight="5:1">
-            <mat-grid-tile>
-                <mat-form-field>
-                    <mat-label>Nombre</mat-label>
-                    <input matInput placeholder="Ingrese su nombre" formControlName="firstCtrl" required>
-                </mat-form-field>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <mat-form-field>
-                    <mat-label>Apellido</mat-label>
-                    <input matInput placeholder="Ingrese su Apellido" formControlName="firstCtrl" required>
-                </mat-form-field>
-            </mat-grid-tile>
-            <mat-grid-tile>
-               
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <mat-form-field>
-                    <mat-label>Sexo (PonerDropdown)</mat-label>
-                    <input matInput placeholder="Ingrese su nombre" formControlName="firstCtrl" required>
-                </mat-form-field>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <mat-form-field>
-                    <mat-label>Correo electrónico</mat-label>
-                    <input matInput placeholder="Ingrese un orreo electrónico" formControlName="firstCtrl" required>
-                </mat-form-field>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <mat-form-field>
-                    <mat-label>teléfono</mat-label>
-                    <input matInput placeholder="Ingrese su teléfono" formControlName="firstCtrl" required>
-                </mat-form-field>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <mat-form-field>
-                    <mat-label>Dirección</mat-label>
-                    <input matInput placeholder="Ejemplo Cra 50 No 40-40" formControlName="firstCtrl" required>
-                </mat-form-field>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <mat-form-field>
-                    <mat-label>Ocupación</mat-label>
-                    <input matInput placeholder="a que se dedica" formControlName="firstCtrl" required>
-                </mat-form-field>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <mat-form-field>
-                    <mat-label>RH</mat-label>
-                    <input matInput placeholder="ejem: O+" formControlName="firstCtrl" required>
-                </mat-form-field>
-            </mat-grid-tile>
-          </mat-grid-list>
-        <div>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-      <form [formGroup]="secondFormGroup">
-        <mat-form-field>
-          <mat-label>Address</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                 required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-      <p>You are now done.</p>
+        <div class="form-row">
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input matInput cirugías="Ingrese su nombre" formControlName="Nombre" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Apellido</mat-label>
+                <input matInput cirugías="Ingrese su Apellido" formControlName="Apellido" required>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Sexo</mat-label>
+              <mat-select  formControlName="Sexo" required>
+                <mat-option value="Sexo">Hombre</mat-option>
+                <mat-option value="Sexo">Mujer</mat-option>
+                <mat-option value="Sexo">Prefiero no decirlo</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Fecha de nacimiento</mat-label>
+              <input matInput [matDatepicker]="picker" cirugías="Seleccione una fecha" formControlName="FechaNacimiento" required>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Correo electrónico</mat-label>
+                <input matInput cirugías="Ingrese un orreo electrónico" formControlName="Correo" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>teléfono</mat-label>
+                <input matInput cirugías="Ingrese su teléfono" formControlName="teléfono" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Dirección</mat-label>
+                <input matInput cirugías="Ejemplo Cra 50 No 40-40" formControlName="Dirección" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Ocupación</mat-label>
+                <input matInput cirugías="a que se dedica" formControlName="Ocupación" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>RH</mat-label>
+                <input matInput cirugías="ejem: O+" formControlName="RH" required>
+            </mat-form-field>
+      </div>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Información medica">
+      <form [formGroup]="secondFormGroup" class="stepper-content">
+        <mat-card class="m-2 h3 col-8">
+          <mat-card-content class="shadow p-3 titulo-card text-center">Por favor ingrese la siguiente información para que nuestras especialistas tengan un poco mas de detalles
+            sobre tu condición medica
+          </mat-card-content>
+        </mat-card>
+        <br>
+        <div class="form-row">
+          <div class="row col-12">
+            <div class="col-6 text-right d-flex justify-content-end">
+              <mat-form-field class="col-10">
+                <mat-label>Antecedentes quirúrgicos</mat-label>
+                <textarea matInput cirugías="Ingrese aquí toda la información posible sobre cirugías recientes o antiguas"></textarea>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <mat-form-field class="col-10">
+                <mat-label>Antecedentes Alérgicos</mat-label>
+                <textarea matInput cirugías=""></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row col-12">
+            <div class="col-6 text-right d-flex justify-content-end">
+              <mat-form-field class="col-10">
+                <mat-label class="text-center">Antecedentes de enfermedades familiares</mat-label>
+                <textarea matInput cirugías=""></textarea>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <mat-form-field class="col-10">
+                <mat-label>Antecedentes farmacológicos</mat-label>
+                <textarea matInput cirugías=""></textarea>
+              </mat-form-field>
+            </div>
+              <div class="col-6 text-right d-flex justify-content-end">
+                <div class="formGroup">
+                  <p>¿Es usted un fumador frecuente?</p>
+                  <mat-form-field>
+                    <mat-label>Seleccione una opción</mat-label>
+                    <mat-select  required>
+                      <mat-option value="T">Si</mat-option>
+                      <mat-option value="F">No</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-6 text-left d-flex justify-content-start">
+                <div class="formGroup">
+                  <p>¿Consume usted alcohol de manera frecuente?</p>
+                  <mat-form-field>
+                    <mat-label>Seleccione una opción</mat-label>
+                    <mat-select  required>
+                      <mat-option value="T">Si</mat-option>
+                      <mat-option value="F">No</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+              <div class="col-12 text-center justify-content-center">
+                  <div class="formGroup">
+                      <p>¿Hace usted ejercicio de manera frecuente?</p>
+                      <mat-form-field>
+                          <mat-label>Seleccione una opción</mat-label>
+                          <mat-select required>
+                              <mat-option value="T">Si</mat-option>
+                              <mat-option value="F">No</mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                  </div>
+               </div>  
+          </div> 
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Atrás</button>
+          <button mat-button matStepperNext>Siguiente</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step class="mb-0">
+      <ng-template matStepLabel>Cuenta</ng-template>
+      <div class="form-row">
+        <form>
+          <div class="col-12">
+            <div class="row text-center justify-content-center">
+              <div class="col-5">
+                <mat-card class="example-card shadow p-3 m-3">
+                  <mat-card-header>
+                    <mat-card-title-group>
+                      <mat-card-title>Datos de inicio de sesión</mat-card-title>
+                    </mat-card-title-group>
+                  </mat-card-header>
+                  <mat-card-content class="p-0">
+                    <mat-form-field>
+                      <mat-label>Ingrese su usuario</mat-label>
+                      <input matInput cirugías="Ingrese su usuario"  required>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <mat-label>Ingrese su contraseña</mat-label>
+                      <input matInput cirugías="Ingrese su contraseña"required>
+                    </mat-form-field>
+                    <mat-form-field>
+                      <mat-label>Repita la contraseña</mat-label>
+                      <input matInput cirugías="Repita la contraseña" required>
+                    </mat-form-field>
+                  </mat-card-content>
+                </mat-card>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="form-row">
+        <button mat-button matStepperPrevious>Atrás</button>
+        <button mat-button (click)="stepper.reset()">Finalizar</button>
       </div>
     </mat-step>
   </mat-stepper>
