@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { VisionComponent } from './vision/vision.component';
 import { MisionComponent } from './mision/mision.component';
 import { ServiciosComponent } from './servicios/servicios.component';
+import { EmpleadosComponent } from './empleados/empleados.component';
 
 const Routes: Routes = [
   {
@@ -31,6 +32,10 @@ const Routes: Routes = [
   {
     path: 'servicios',
     component: ServiciosComponent
+  },
+  {
+    path: 'empleados',
+    component: EmpleadosComponent
   },
   {
     path: '**',

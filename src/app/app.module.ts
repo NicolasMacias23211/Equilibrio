@@ -23,6 +23,7 @@ import { VisionComponent } from './vision/vision.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginContentComponent } from './login-content/login-content.component';
 import { HomeBodyComponent } from './home-body/home-body.component';
+import { EmpleadosComponent } from './empleados/empleados.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HomeBodyComponent } from './home-body/home-body.component';
     ServiciosComponent,
     MisionComponent,
     VisionComponent,
-    HomeBodyComponent
+    HomeBodyComponent,
+    EmpleadosComponent
   ],
   imports: [
     BrowserModule,

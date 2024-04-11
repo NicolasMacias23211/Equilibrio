@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="empleados.component.css">
+    
+</head>
+
+<body>
+    <header>
+        <app-header></app-header>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row text-center">
+                <h1>Información traída de la DB:</h1>
+                <div *ngIf="datos && datos.length > 0">
+                    <p>Nombre: {{ datos[0].Nombre }}</p>
+                    <p>Primer Apellido: {{ datos[0].PrimerApellido }}</p>
+                    <p>Ultimo Titulo Profesional: {{ datos[0].UltimoTituloProfesional }}</p>
+                    <p>Correo: {{ datos[0].Correo }}</p>
+                    <p>Campo De Profundización: {{ datos[0].CampoDeProfundizacion }}</p>
+                </div>
+            </div>
+        </div>          
+    </main>
+    <footer>
+        <app-foother></app-foother>
+    </footer>
+</body>
+</html>
+<router-outlet></router-outlet>
