@@ -1,0 +1,23 @@
+.cajon {
+    position: relative;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    width: 50%;
+    height: 200px;
+    margin-bottom: 50px;
+  }
+  .cajon-superpuesto {
+    position: absolute;
+    top: 50px; 
+    right: -180px; 
+    width: 250px; 
+    height: 100px;
+    background-image: url("/assets/FOTO3.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    z-index: 10;
+  }

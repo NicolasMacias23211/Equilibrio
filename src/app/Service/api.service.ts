@@ -20,7 +20,6 @@ export class ApiService {
       'Access-Control-Allow-Origin': '*'
     });
     return this.http.post(`${this.API_URL}/autenticacion`, body,{ headers: headers });
-
   }
 
   GetEmpleados():Observable<any>{
@@ -31,10 +30,13 @@ export class ApiService {
     return this.http.get(`${this.API_URL}/empleados`,{ headers: headers });
   }
 
- // public GetAuthentication(form:any) : Observable<ResponseI>{
- //   let dirección= this.URL+"autenticacion";
- //   return this.http.post<ResponseI>(dirección,form)
- // }
+  GetServicios():Observable<any>{
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    });
+    return this.http.get(`${this.API_URL}/servicios`,{ headers: headers });
+  }
 
  sendPostRequest(userData: any) {
   const url = 'http://localhost:8080/autenticacion'; // Reemplaza con la URL real

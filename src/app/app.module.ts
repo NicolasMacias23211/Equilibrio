@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginContentComponent } from './login-content/login-content.component';
 import { HomeBodyComponent } from './home-body/home-body.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
+import { CalendarioComponent } from './calendario/calendario.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { EmpleadosComponent } from './empleados/empleados.component';
     MisionComponent,
     VisionComponent,
     HomeBodyComponent,
-    EmpleadosComponent
+    EmpleadosComponent,
+    CalendarioComponent
   ],
   imports: [
     BrowserModule,
