@@ -1,27 +1,43 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApiService } from '../Service/api.service';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-servicios',
   templateUrl: './servicios.component.html',
-  styleUrls: ['./servicios.component.css']
+  styleUrls: ['./servicios.component.css'],
+  animations:[
+    trigger('Entrada',[
+      state('void',style({
+        transform: 'translateX(-100%)',
+        opacity:0
+      })),
+      transition(':enter',[
+        animate(700,style({
+          transform:'translateX(0)',
+          opacity:1
+        }))
+      ])
+    ]),
+    trigger('Entrada2',[
+      state('void',style({
+        transform: 'translateX(100%)',
+        opacity:0
+      })),
+      transition(':enter',[
+        animate(700,style({
+          transform:'translateX(0)',
+          opacity:1
+        }))
+      ])
+    ])
+  ]
 })
 export class ServiciosComponent {
   datos: any;
-
+  hovered: boolean = false
   constructor(private ApiService: ApiService) { }
 
-  ngOnInit() {
-    this.ApiService.GetServicios().subscribe(
-      data => {
-        this.datos = data;
-        console.log(this.datos)
-      },
-      error => {
-        console.error(error);
-      }
-    );
-  }
 
 
 }

@@ -29,3 +29,8 @@ justify-content: center;
 mat-card{
   background-color: #C4CCC1;
 }
+
+.mat-dialog-content {
+  max-height: calc(100vh - 200px); 
+  overflow-y: auto; 
+}

@@ -1,52 +1,60 @@
 <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear" [hidden]="isVisible">
     {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
   </button>
-  <mat-stepper [linear]="isLinear" #stepper @Entrada>
+  <mat-stepper class="Startcontent" [linear]="isLinear" #stepper @Entrada>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup" class="stepper-content">
         <ng-template matStepLabel>Información Básica</ng-template>
         <div class="form-row">
             <mat-form-field>
                 <mat-label>Nombre</mat-label>
-                <input matInput cirugías="Ingrese su nombre" formControlName="Nombre" required>
+                <input matInput placeholder="Ingrese su nombre" formControlName="Nombre" required>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Apellido</mat-label>
-                <input matInput cirugías="Ingrese su Apellido" formControlName="Apellido" required>
+                <mat-label>Primer Apellido</mat-label>
+                <input matInput placeholder="Ingrese su primer apellido" formControlName="PrimerApellido" required>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Segundo apellido</mat-label>
+              <input matInput placeholder="Ingrese su segundo apellido" formControlName="SegundoApellido" required>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>documento</mat-label>
+              <input matInput placeholder="Ingrese su documento de identidad" type="number" formControlName="documento" required>
             </mat-form-field>
             <mat-form-field>
               <mat-label>Sexo</mat-label>
               <mat-select  formControlName="Sexo" required>
-                <mat-option value="Sexo">Hombre</mat-option>
-                <mat-option value="Sexo">Mujer</mat-option>
-                <mat-option value="Sexo">Prefiero no decirlo</mat-option>
+                <mat-option value="Male">Hombre</mat-option>
+                <mat-option value="Female">Mujer</mat-option>
+                <mat-option value="NN">Prefiero no decirlo</mat-option>
               </mat-select>
             </mat-form-field>
             <mat-form-field>
               <mat-label>Fecha de nacimiento</mat-label>
-              <input matInput [matDatepicker]="picker" cirugías="Seleccione una fecha" formControlName="FechaNacimiento" required>
+              <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha" formControlName="FechaNacimiento" required>
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Correo electrónico</mat-label>
-                <input matInput cirugías="Ingrese un orreo electrónico" formControlName="Correo" required>
+                <input matInput placeholder="Ingrese un correo electrónico" type="email" formControlName="Correo" required>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>teléfono</mat-label>
-                <input matInput cirugías="Ingrese su teléfono" formControlName="teléfono" required>
+                <input matInput placeholder="Ingrese su teléfono" type="number" formControlName="telefono" required>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Dirección</mat-label>
-                <input matInput cirugías="Ejemplo Cra 50 No 40-40" formControlName="Dirección" required>
+                <input matInput placeholder="Ejemplo Cra 50 No 40-40" formControlName="Dirección" required>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Ocupación</mat-label>
-                <input matInput cirugías="a que se dedica" formControlName="Ocupación" required>
+                <input matInput placeholder="a que se dedica" formControlName="Ocupación" required>
             </mat-form-field>
             <mat-form-field>
                 <mat-label>RH</mat-label>
-                <input matInput cirugías="ejem: O+" formControlName="RH" required>
+                <input matInput placeholder="ejem: O+" formControlName="RH" required>
             </mat-form-field>
       </div>
       <div>
@@ -67,13 +75,13 @@
             <div class="col-6 text-right d-flex justify-content-end">
               <mat-form-field class="col-10">
                 <mat-label>Antecedentes quirúrgicos</mat-label>
-                <textarea matInput cirugías="Ingrese aquí toda la información posible sobre cirugías recientes o antiguas"></textarea>
+                <textarea matInput placeholder="Ingrese aquí toda la información posible sobre cirugías recientes o antiguas" formControlName="quirúrgicos" required></textarea>
               </mat-form-field>
             </div>
             <div class="col-6">
               <mat-form-field class="col-10">
                 <mat-label>Antecedentes Alérgicos</mat-label>
-                <textarea matInput cirugías=""></textarea>
+                <textarea matInput placeholder="" formControlName="Alérgicos" required></textarea>
               </mat-form-field>
             </div>
           </div>
@@ -81,13 +89,13 @@
             <div class="col-6 text-right d-flex justify-content-end">
               <mat-form-field class="col-10">
                 <mat-label class="text-center">Antecedentes de enfermedades familiares</mat-label>
-                <textarea matInput cirugías=""></textarea>
+                <textarea matInput placeholder="" formControlName="familiares" required></textarea>
               </mat-form-field>
             </div>
             <div class="col-6">
               <mat-form-field class="col-10">
                 <mat-label>Antecedentes farmacológicos</mat-label>
-                <textarea matInput cirugías=""></textarea>
+                <textarea matInput placeholder="" formControlName="farmacológicos" required></textarea>
               </mat-form-field>
             </div>
               <div class="col-6 text-right d-flex justify-content-end">
@@ -95,9 +103,9 @@
                   <p>¿Es usted un fumador frecuente?</p>
                   <mat-form-field>
                     <mat-label>Seleccione una opción</mat-label>
-                    <mat-select  required>
-                      <mat-option value="T">Si</mat-option>
-                      <mat-option value="F">No</mat-option>
+                    <mat-select formControlName="fumador" required>
+                      <mat-option value="1">Si</mat-option>
+                      <mat-option value="0">No</mat-option>
                     </mat-select>
                   </mat-form-field>
                 </div>
@@ -107,9 +115,9 @@
                   <p>¿Consume usted alcohol de manera frecuente?</p>
                   <mat-form-field>
                     <mat-label>Seleccione una opción</mat-label>
-                    <mat-select  required>
-                      <mat-option value="T">Si</mat-option>
-                      <mat-option value="F">No</mat-option>
+                    <mat-select formControlName="alcohol" required>
+                      <mat-option value="1">Si</mat-option>
+                      <mat-option value="0">No</mat-option>
                     </mat-select>
                   </mat-form-field>
                 </div>
@@ -120,9 +128,9 @@
                       <p>¿Hace usted ejercicio de manera frecuente?</p>
                       <mat-form-field>
                           <mat-label>Seleccione una opción</mat-label>
-                          <mat-select required>
-                              <mat-option value="T">Si</mat-option>
-                              <mat-option value="F">No</mat-option>
+                          <mat-select formControlName="ejercicio" required>
+                              <mat-option value="1">Si</mat-option>
+                              <mat-option value="0">No</mat-option>
                           </mat-select>
                       </mat-form-field>
                   </div>
@@ -139,7 +147,7 @@
     <mat-step class="mb-0">
       <ng-template matStepLabel>Cuenta</ng-template>
       <div class="form-row">
-        <form>
+        <form [formGroup]="thirdFormGroup">
           <div class="col-12">
             <div class="row text-center justify-content-center">
               <div class="col-5">
@@ -152,16 +160,23 @@
                   <mat-card-content class="p-0">
                     <mat-form-field>
                       <mat-label>Ingrese su usuario</mat-label>
-                      <input matInput cirugías="Ingrese su usuario"  required>
+                      <input matInput formControlName="usuario" placeholder="Ingrese su usuario"  required>
                     </mat-form-field>
                     <mat-form-field>
                       <mat-label>Ingrese su contraseña</mat-label>
-                      <input matInput cirugías="Ingrese su contraseña"required>
+                      <input matInput formControlName="contraseña" type="password" placeholder="Ingrese su contraseña"required>
+                      <div *ngIf="thirdFormGroup.get('contraseña')?.invalid && (thirdFormGroup.get('contraseña')?.touched || thirdFormGroup.get('contraseña')?.dirty)">
+                        <small *ngIf="thirdFormGroup.get('contraseña')?.errors?.['required']">La contraseña es requerida.</small>
+                      </div>
                     </mat-form-field>
                     <mat-form-field>
                       <mat-label>Repita la contraseña</mat-label>
-                      <input matInput cirugías="Repita la contraseña" required>
+                      <input matInput formControlName="Confirmcontraseña" type="password" placeholder="Repita la contraseña" required>
                     </mat-form-field>
+                    <div *ngIf="thirdFormGroup.get('Confirmcontraseña')?.invalid && (thirdFormGroup.get('Confirmcontraseña')?.touched || thirdFormGroup.get('Confirmcontraseña')?.dirty)">
+                      <small *ngIf="thirdFormGroup.get('Confirmcontraseña')?.errors?.['required']">La confirmación de la contraseña es requerida.</small>
+                      <small *ngIf="thirdFormGroup.get('Confirmcontraseña')?.errors?.['confirmPasswordValidator']">Las contraseñas no coinciden.</small>
+                    </div>
                   </mat-card-content>
                 </mat-card>
               </div>
@@ -171,7 +186,7 @@
       </div>
       <div class="form-row">
         <button mat-button matStepperPrevious>Atrás</button>
-        <button mat-button (click)="stepper.reset()">Finalizar</button>
+        <button mat-button id="submit-button" (click)="guardarDatos()" [disabled]="thirdFormGroup.invalid">Finalizar</button>
       </div>
     </mat-step>
   </mat-stepper>

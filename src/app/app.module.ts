@@ -25,6 +25,13 @@ import { LoginContentComponent } from './login-content/login-content.component';
 import { HomeBodyComponent } from './home-body/home-body.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { CalendarioComponent } from './calendario/calendario.component';
+import { DatePipe } from '@angular/common';
+import { ServicesCardsComponent } from './services-cards/services-cards.component';
+import { CitaComponent } from './cita/cita.component';
+import { CrearCitaComponent } from './crear-cita/crear-cita.component';
+import { UsersTablesComponent } from './users-tables/users-tables.component';
+import { AdminsViewsComponent } from './admins-views/admins-views.component';
+import { CitasTablesComponent } from './citas-tables/citas-tables.component';
 
 @NgModule({
   declarations: [
@@ -37,14 +44,20 @@ import { CalendarioComponent } from './calendario/calendario.component';
     ServiciosComponent,
     MisionComponent,
     VisionComponent,
-    HomeBodyComponent,
     EmpleadosComponent,
-    CalendarioComponent
+    CalendarioComponent,
+    CitaComponent,
+    AdminsViewsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    CitasTablesComponent,
+    ServicesCardsComponent,
+    HomeBodyComponent,
+    CrearCitaComponent,
     AppRoutingModule,
+    UsersTablesComponent,
     BrowserAnimationsModule,
     MatSlideToggleModule,
     MatGridListModule,
@@ -58,7 +71,7 @@ import { CalendarioComponent } from './calendario/calendario.component';
     PasosDeRegistroComponent,
     LoginContentComponent
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule {

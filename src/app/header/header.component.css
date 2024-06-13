@@ -1,6 +1,19 @@
-#Top-bar{
-    background-color: #C4CCC1;
+#Top-bar {
+    border-bottom-width: 0;
+    padding-bottom: 0;
+    background-color: #5F704E;
 }
-header{
-    background-color:#DDDCD8;
+.navbar.fixed-top + .navbar.fixed-top {
+    top: 56px; /* Ajusta esto según la altura del primer navbar */
+}
+#back-bar{
+    background-color: #C6B79F;
+}
+main{
+    background-color:#ECE4D2;
+}
+.navbar-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

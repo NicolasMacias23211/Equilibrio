@@ -8,6 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { Router } from '@angular/router';
+import { AuthService } from '../AuthService/auth-service.service';
 
 @Component({
   selector: 'app-login-content',
@@ -50,10 +51,11 @@ export class LoginContentComponent{
     email : new FormControl('', Validators.email),
     contraseña : new FormControl('',Validators.required)
   })
+  
 
   userData = { email: '', password: '' };
 
-  constructor(private ApiService: ApiService,private router: Router) { }
+  constructor(private ApiService: ApiService,private router: Router,private authService: AuthService) { }
 
   submitLoginForm() {
     this.ApiService.login(this.userData.email, this.userData.password).subscribe(
@@ -61,7 +63,8 @@ export class LoginContentComponent{
         let data = JSON.parse(response);
         console.log(data.id);
         if (data && data.id) {
-          this.router.navigate(['/empleados']);
+          this.authService.setUserId(data.id); // Guarda la ID del usuario
+          this.router.navigate(['/cita']);
         }
       },
       error => {

@@ -1,0 +1,6 @@
+/* src/app/users-tables/users-tables.component.css */
+.table-container {
+    max-width: 800px; /* Ajusta este valor según necesites */
+    margin: 0 auto;
+  }
+  

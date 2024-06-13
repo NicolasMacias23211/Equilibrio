@@ -1,0 +1,28 @@
+<div class="container-fluid Startcontent">
+    <div class="row justify-content-center">
+        <div class="col-12 mb-2">
+            <h1 class="text-center">Estos son los servicios que tenemos para ofrecete para var mas informacion selecciona alguno</h1>
+        </div>
+        <div class="col-4">
+            <mat-card class="example-card shadow mb-5 cards rounded" [ngClass]="{'hovered': hovered}" (mouseover)="hovered = true" (mouseleave)="hovered = false">
+                <mat-card-header>
+                    <div class="imagenes">                 
+                    </div>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-card-title>Masaje realajante</mat-card-title>
+                    <p>
+                        Masaje de relajación
+                        <br>
+                        60 minutos
+                        <br>
+                        Valor: $80.000 
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a mat-button href="cita" >Reservar</a>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

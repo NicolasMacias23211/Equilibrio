@@ -1,0 +1,27 @@
+.stepper-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-stepper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-step {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .form-step mat-form-field {
+    flex: 1;
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
