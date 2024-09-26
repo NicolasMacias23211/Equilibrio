@@ -1,77 +1,61 @@
 <!-- src/app/users-tables/users-tables.component.html -->
-<div class="container Startcontent">
+<div>
     <div class="row">
         <div class="col-12">
             <h1>Usuarios registrados en el sistema:</h1>
             <div class="mat-elevation-z8">
                 <table mat-table [dataSource]="dataSource" class="table table-striped table-hover">
-                    <!-- IdUsuario Column -->
-                    <ng-container matColumnDef="IdUsuario">
-                    <th mat-header-cell *matHeaderCellDef> ID </th>
-                    <td mat-cell *matCellDef="let element"> {{element.IdUsuario}} </td>
-                    </ng-container>
         
-                    <!-- Nombre Column -->
                     <ng-container matColumnDef="Nombre">
                     <th mat-header-cell *matHeaderCellDef> Nombre </th>
                     <td mat-cell *matCellDef="let element"> {{element.Nombre}} </td>
                     </ng-container>
         
-                    <!-- PrimerApellido Column -->
                     <ng-container matColumnDef="PrimerApellido">
                     <th mat-header-cell *matHeaderCellDef> Primer Apellido </th>
                     <td mat-cell *matCellDef="let element"> {{element.PrimerApellido}} </td>
                     </ng-container>
         
-                    <!-- SegundoApellido Column -->
                     <ng-container matColumnDef="SegundoApellido">
                     <th mat-header-cell *matHeaderCellDef> Segundo Apellido </th>
                     <td mat-cell *matCellDef="let element"> {{element.SegundoApellido}} </td>
                     </ng-container>
         
-                    <!-- Documento Column -->
                     <ng-container matColumnDef="Documento">
                     <th mat-header-cell *matHeaderCellDef> Documento </th>
                     <td mat-cell *matCellDef="let element"> {{element.Documento}} </td>
                     </ng-container>
         
-                    <!-- FechaNacimiento Column -->
                     <ng-container matColumnDef="FechaNacimiento">
                     <th mat-header-cell *matHeaderCellDef> Fecha de Nacimiento </th>
                     <td mat-cell *matCellDef="let element"> {{element.FechaNacimiento | date}} </td>
                     </ng-container>
         
-                    <!-- Sexo Column -->
                     <ng-container matColumnDef="Sexo">
                     <th mat-header-cell *matHeaderCellDef> Sexo </th>
                     <td mat-cell *matCellDef="let element"> {{element.Sexo}} </td>
                     </ng-container>
         
-                    <!-- CorreoElectronico Column -->
                     <ng-container matColumnDef="CorreoElectronico">
                     <th mat-header-cell *matHeaderCellDef> Correo Electrónico </th>
                     <td mat-cell *matCellDef="let element"> {{element.CorreoElectronico}} </td>
                     </ng-container>
         
-                    <!-- Telefono Column -->
                     <ng-container matColumnDef="Telefono">
                     <th mat-header-cell *matHeaderCellDef> Teléfono </th>
                     <td mat-cell *matCellDef="let element"> {{element.Telefono}} </td>
                     </ng-container>
         
-                    <!-- Direccion Column -->
                     <ng-container matColumnDef="Direccion">
                     <th mat-header-cell *matHeaderCellDef> Dirección </th>
                     <td mat-cell *matCellDef="let element"> {{element.Direccion}} </td>
                     </ng-container>
         
-                    <!-- Ocupacion Column -->
                     <ng-container matColumnDef="Ocupacion">
                     <th mat-header-cell *matHeaderCellDef> Ocupación </th>
                     <td mat-cell *matCellDef="let element"> {{element.Ocupacion}} </td>
                     </ng-container>
         
-                    <!-- RH Column -->
                     <ng-container matColumnDef="RH">
                     <th mat-header-cell *matHeaderCellDef> RH </th>
                     <td mat-cell *matCellDef="let element"> {{element.RH}} </td>

@@ -63,6 +63,15 @@ export class ApiService {
     });
     return this.http.get(`${this.API_URL}/citas`,{ headers: headers });
   }
+  
+  updateEmpleado(empleado: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    });
+    return this.http.put(`${this.API_URL}/empleados`, empleado,{ headers: headers });
+  }
+
 
   GetUsuarios():Observable<any>{
     const headers = new HttpHeaders({
@@ -78,7 +87,6 @@ export class ApiService {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*'
   });
-
 
 
   return this.http.post(url, userData, { headers: headers });

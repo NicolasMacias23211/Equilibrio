@@ -9,10 +9,24 @@
     <header>
         <app-header></app-header>
     </header>
-    <main>
-        <app-users-tables></app-users-tables>
-        <app-citas-tables></app-citas-tables>
-    </main>
+    <main class="container Startcontent">
+        <mat-button-toggle-group 
+          name="fontStyle" 
+          aria-label="Font Style" 
+          class="mb-2"
+          (change)="onToggleChange($event.value)">
+          <mat-button-toggle value="citas">Citas</mat-button-toggle>
+          <mat-button-toggle value="users">Users</mat-button-toggle>
+          <mat-button-toggle value="Empleados">Empleados</mat-button-toggle>
+          <mat-button-toggle value="Agendas">Agendas</mat-button-toggle>
+          <mat-button-toggle value="CampoDeEstudio">Campos de estudio</mat-button-toggle>
+          <mat-button-toggle value="Servicios">Servicios</mat-button-toggle>
+          <mat-button-toggle value="PaquetesDeServicios">Paquetes de servicios</mat-button-toggle>
+        </mat-button-toggle-group>
+        <app-users-tables *ngIf="selectedComponent === 'users'"></app-users-tables>
+        <app-citas-tables *ngIf="selectedComponent === 'citas'"></app-citas-tables>
+        <app-employees-tables *ngIf="selectedComponent === 'Empleados'"></app-employees-tables>
+      </main>
     <footer>
         <app-foother></app-foother>
     </footer>

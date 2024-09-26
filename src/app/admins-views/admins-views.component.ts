@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AdminsViewsComponent {
 
+  selectedComponent: string = "citas";
+
+  onToggleChange(value: string) {
+    this.selectedComponent = value;
+  }
 }

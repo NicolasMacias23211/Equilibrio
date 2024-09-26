@@ -1,0 +1,14 @@
+.custom-dialog-container {
+    width: 300px; 
+    max-height: 70vh; 
+  }
+  
+  .custom-dialog-container .mat-dialog-content {
+    overflow: hidden; 
+    padding: 20px;
+  }
+  
+  .custom-dialog-container .mat-dialog-actions {
+    overflow: hidden;
+    padding: 10px; 
+  }

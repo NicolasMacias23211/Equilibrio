@@ -5,37 +5,27 @@
             <h1>Ultimas citas:</h1>
             <div class="mat-elevation-z8">
                 <table mat-table [dataSource]="dataSource" class="table table-striped table-hover">
-                    <!-- IdUsuario Column -->
-                    <ng-container matColumnDef="IdCita">
-                    <th mat-header-cell *matHeaderCellDef> IdCita </th>
-                    <td mat-cell *matCellDef="let element"> {{element.IdCita}} </td>
-                    </ng-container>
         
-                    <!-- Nombre Column -->
                     <ng-container matColumnDef="DireccionDeLaCita">
                     <th mat-header-cell *matHeaderCellDef> Direccion De La Cita </th>
                     <td mat-cell *matCellDef="let element"> {{element.DireccionDeLaCita}} </td>
                     </ng-container>
         
-                    <!-- PrimerApellido Column -->
                     <ng-container matColumnDef="NombreCompletoEmpleado">
                     <th mat-header-cell *matHeaderCellDef> Nombre Completo Empleado </th>
                     <td mat-cell *matCellDef="let element"> {{element.NombreCompletoEmpleado}} </td>
                     </ng-container>
         
-                    <!-- SegundoApellido Column -->
                     <ng-container matColumnDef="NombreCompletoUsuario">
                     <th mat-header-cell *matHeaderCellDef> Nombre Completo Usuario </th>
                     <td mat-cell *matCellDef="let element"> {{element.NombreCompletoUsuario}} </td>
                     </ng-container>
         
-                    <!-- Documento Column -->
                     <ng-container matColumnDef="NombreServicio">
                     <th mat-header-cell *matHeaderCellDef> Servicio </th>
                     <td mat-cell *matCellDef="let element"> {{element.NombreServicio}} </td>
                     </ng-container>
         
-                    <!-- FechaNacimiento Column -->
                     <ng-container matColumnDef="EstadoDeCita">
                     <th mat-header-cell *matHeaderCellDef> Estado De la Cita </th>
                     <td mat-cell *matCellDef="let element"> {{element.EstadoDeCita}} </td>

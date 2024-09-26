@@ -23,7 +23,8 @@ import { ApiService } from '../Service/api.service';
   ]
 })
 export class CitasTablesComponent implements OnInit {
-  displayedColumns: string[] = ['IdCita', 'DireccionDeLaCita', 'NombreCompletoEmpleado', 'NombreCompletoUsuario', 'NombreServicio', 'EstadoDeCita'];
+  displayedColumns: string[] = ['DireccionDeLaCita', 'NombreCompletoEmpleado',
+     'NombreCompletoUsuario', 'NombreServicio', 'EstadoDeCita'];
   dataSource = new MatTableDataSource<any>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator | null = null;
@@ -32,7 +33,7 @@ export class CitasTablesComponent implements OnInit {
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.apiService.GetCitas().subscribe(data => {
+    this.apiService.GetCitas().subscribe(data => {      
       this.dataSource.data = data;
       if (this.paginator) {
         this.dataSource.paginator = this.paginator;

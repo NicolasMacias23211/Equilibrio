@@ -24,7 +24,7 @@ import { ApiService } from '../Service/api.service';
 })
 export class UsersTablesComponent implements OnInit {
   displayedColumns: string[] = [
-    'IdUsuario', 'Nombre', 'PrimerApellido', 'SegundoApellido', 'Documento',
+    'Nombre', 'PrimerApellido', 'SegundoApellido', 'Documento',
     'FechaNacimiento', 'Sexo', 'CorreoElectronico', 'Telefono', 'Direccion',
     'Ocupacion', 'RH'
   ];

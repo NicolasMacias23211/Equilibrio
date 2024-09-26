@@ -14,6 +14,7 @@ import { PasosDeRegistroComponent } from './pasos-de-registro/pasos-de-registro.
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
@@ -32,6 +33,10 @@ import { CrearCitaComponent } from './crear-cita/crear-cita.component';
 import { UsersTablesComponent } from './users-tables/users-tables.component';
 import { AdminsViewsComponent } from './admins-views/admins-views.component';
 import { CitasTablesComponent } from './citas-tables/citas-tables.component';
+import { ProfesionalesComponent } from './profesionales/profesionales.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { EmployeesTablesComponent } from './employees-tables/employees-tables.component';
+import { EmployeeEditModalComponent } from './employee-edit-modal/employee-edit-modal.component';
 
 @NgModule({
   declarations: [
@@ -47,16 +52,21 @@ import { CitasTablesComponent } from './citas-tables/citas-tables.component';
     EmpleadosComponent,
     CalendarioComponent,
     CitaComponent,
-    AdminsViewsComponent
+    AdminsViewsComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    MatDialogModule,
+    EmployeesTablesComponent,
+    EmployeeEditModalComponent,
+    ProfesionalesComponent,
     CitasTablesComponent,
     ServicesCardsComponent,
     HomeBodyComponent,
     CrearCitaComponent,
     AppRoutingModule,
+    MatButtonToggleModule,
     UsersTablesComponent,
     BrowserAnimationsModule,
     MatSlideToggleModule,
@@ -69,7 +79,13 @@ import { CitasTablesComponent } from './citas-tables/citas-tables.component';
     MatFormFieldModule,
     MatInputModule,
     PasosDeRegistroComponent,
-    LoginContentComponent
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
+    LoginContentComponent,
+    
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
