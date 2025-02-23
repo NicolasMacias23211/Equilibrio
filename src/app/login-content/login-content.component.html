@@ -1,14 +1,14 @@
-<div class="row Startcontent">
-   <div class="col-6 ms-5 text-center justify-content-center" @Entrada>
+<div class="row Startcontent" style="min-height: 100vh;">
+   <div class="col-6 ms-5 col-sm-12 col-md-6 text-center justify-content-center" @Entrada>
       <br>
-      <h1>"Nadie sabe que necesita un masaje hasta que recibe el primero"</h1>
+      <h1 class="slogan">"Nadie sabe que necesita un masaje hasta que recibe el primero"</h1>
       <br>
-      <img src="/assets/FOTO3.webp" class="img-fluid m-4 rounded mx-auto d-block" alt="pindas">
+      <img src="/assets/tranquilidad.jpg" class="img-fluid m-4 rounded mx-auto d-block cardImnague" alt="imagen de tranquilidad">
    </div>
    <div class="col-1">
    </div>
-   <div class="col-4" @Entrada2>
-      <div class="text-right d-flex justify-content-end me-5 mb-4">
+   <div class="col-4 col-sm-12 col-md-4" @Entrada2>
+      <div class="text-right d-flex justify-content-end me-5 mb-4 mt-4">
          <div class="overlay">
              <form [formGroup]="LoginFrom" (ngSubmit)="submitLoginForm()">
                 <div class="con">

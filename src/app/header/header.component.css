@@ -1,19 +1,40 @@
-#Top-bar {
+.transparent-header {
     border-bottom-width: 0;
     padding-bottom: 0;
-    background-color: #5F704E;
+    Background-color: transparent; 
 }
+
+.solid-header {
+    background: #DDDCD8;
+    color: black;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transparent-header_bottom {
+    border-bottom-width: 0;
+    padding-bottom: 0;
+    Background-color: transparent; 
+}
+
+.solid-header_bottom {
+    background: #c1c1c0;
+    color: black;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
 .navbar.fixed-top + .navbar.fixed-top {
     top: 56px; /* Ajusta esto según la altura del primer navbar */
 }
-#back-bar{
-    background-color: #C6B79F;
-}
-main{
-    background-color:#ECE4D2;
-}
+
 .navbar-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+ul{
+    margin-left: 7vw;
 }

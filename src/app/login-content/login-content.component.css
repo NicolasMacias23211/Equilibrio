@@ -73,3 +73,31 @@ button:hover {
         transform: translateY(5px);
     }
 }
+
+.slogan {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-top: 0;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: -moz-linear-gradient(top, #d9d4d4 35%, #2a2b2c 100%);
+    background: -webkit-linear-gradient(top, #dbd6d6 35%, #4e6773 100%);
+    background: linear-gradient(to bottom, #cbc4c4 35%, #4e6773 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; 
+    width: 100%; 
+    line-height: 1.2; 
+}
+  
+ /* From Uiverse.io by adamgiebl */ 
+.cardImnague {
+    border-radius: 30px;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
+  }
