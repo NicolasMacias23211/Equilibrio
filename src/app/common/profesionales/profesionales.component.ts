@@ -7,8 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatStepper, MatStepperModule } from '@angular/material/stepper';
 import { Router } from '@angular/router';
-import { AuthService } from '../AuthService/auth-service.service';
-import { ApiService } from '../Service/api.service';
+import { AuthService } from '../../authentication/AuthService/auth-service.service';
+import { ApiService } from '../../Service/api.service';
 
 
 export interface DialogData {

@@ -16,7 +16,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Router } from '@angular/router';
-import { ApiService } from '../Service/api.service';
+import { ApiService } from '../../Service/api.service';
 
 export interface DialogData {
   errorMessage: string;

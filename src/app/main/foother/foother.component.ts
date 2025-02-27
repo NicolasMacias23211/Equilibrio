@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './foother.component.html',
   styleUrls: ['./foother.component.css']
 })
+
 export class FootherComponent {
 
 }

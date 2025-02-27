@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {trigger,style,transition,animate, state} from '@angular/animations'
 import {FormControl, Validators, FormsModule, ReactiveFormsModule, FormGroup, NgForm} from '@angular/forms';
-import { ApiService } from '../Service/api.service';
+import { ApiService } from '../../Service/api.service';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { Router } from '@angular/router';
-import { AuthService } from '../AuthService/auth-service.service';
+import { AuthService } from '../../authentication/AuthService/auth-service.service';
 
 @Component({
   selector: 'app-login-content',

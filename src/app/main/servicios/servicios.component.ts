@@ -1,5 +1,5 @@
+import { ApiService } from './../../Service/api.service';
 import { Component } from '@angular/core';
-import { ApiService } from '../Service/api.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({

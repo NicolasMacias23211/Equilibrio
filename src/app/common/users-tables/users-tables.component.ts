@@ -7,7 +7,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { ApiService } from '../Service/api.service';
+import { ApiService } from '../../Service/api.service';
 
 @Component({
   selector: 'app-users-tables',
